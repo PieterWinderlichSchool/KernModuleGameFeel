@@ -13,19 +13,19 @@ public class PlayerAnimations : MonoBehaviour
     void Start()
     {
         controller.GroundedChanged += ChangeAnimation;
+        controller.movementChanged += ChangeAnimation;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void ChangeAnimation(bool hasJumped, float velocity)
     {
-        if (hasJumped)
-        {
-            //Animator.
-        }
+        animations.SetBool("Grounded",hasJumped);
+        
+    }
+
+    public void ChangeAnimation(float speed)
+    {
+        animations.SetFloat("Speed", speed);
     }
 }

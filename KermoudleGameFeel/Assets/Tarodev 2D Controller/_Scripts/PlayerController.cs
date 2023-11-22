@@ -19,6 +19,7 @@ namespace TarodevController
         private FrameInput _frameInput;
         private Vector3 _frameVelocity;
         private bool _cachedQueryStartInColliders;
+        public Action<float> movementChanged;
         #region Interface
 
         public Vector3 FrameInput => _frameInput.Move;
@@ -109,7 +110,6 @@ namespace TarodevController
                 _grounded = false;
                 _frameLeftGrounded = _time;
                 GroundedChanged?.Invoke(false, 0);
-                
             }
 
             //Physics2D.queriesStartInColliders = _cachedQueryStartInColliders;
@@ -160,10 +160,12 @@ namespace TarodevController
             {
                 var deceleration = _grounded ? _stats.GroundDeceleration : _stats.AirDeceleration;
                 _frameVelocity.x = Mathf.MoveTowards(_frameVelocity.x, 0, deceleration * Time.fixedDeltaTime);
+                movementChanged?.Invoke(_frameInput.Move.x);
             }
             else
             {
                 _frameVelocity.x = Mathf.MoveTowards(_frameVelocity.x, _frameInput.Move.x * _stats.MaxSpeed, _stats.Acceleration * Time.fixedDeltaTime);
+                movementChanged?.Invoke(_frameInput.Move.x);
             }
         }
 
