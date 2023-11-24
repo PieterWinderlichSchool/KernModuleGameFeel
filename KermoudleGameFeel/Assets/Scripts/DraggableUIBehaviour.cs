@@ -20,9 +20,16 @@ public class DraggableUIBehaviour : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition.z = DistanceToCamera;
-            transform.position = cam.ScreenToWorldPoint(mousePosition);
+            if (!Input.GetKey(KeyCode.H))
+            {
+                Vector3 mousePosition = Input.mousePosition;
+                mousePosition.z = DistanceToCamera;
+                transform.position = cam.ScreenToWorldPoint(mousePosition); 
+            }
+            else
+            {
+                Debug.Log("hit");
+            }
         }
         else
         {

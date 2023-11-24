@@ -22,6 +22,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 588993195003156133, guid: c3a16805001d6af4d9af5d6189f64d67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1738731615264657465, guid: c3a16805001d6af4d9af5d6189f64d67,
         type: 3}
       propertyPath: m_RootOrder
@@ -95,7 +100,12 @@ PrefabInstance:
     - target: {fileID: 1791143861462059839, guid: c3a16805001d6af4d9af5d6189f64d67,
         type: 3}
       propertyPath: m_Name
-      value: PlankObject
+      value: PlankObject Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791143861462059839, guid: c3a16805001d6af4d9af5d6189f64d67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6688247500450008508, guid: c3a16805001d6af4d9af5d6189f64d67,
         type: 3}
@@ -103,6 +113,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ef0c113278158ed48be26ee2406e62cf,
         type: 3}
+    - target: {fileID: 6688247500450008508, guid: c3a16805001d6af4d9af5d6189f64d67,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 8441902054988970132, guid: c3a16805001d6af4d9af5d6189f64d67,
         type: 3}
       propertyPath: m_LocalPosition.z
