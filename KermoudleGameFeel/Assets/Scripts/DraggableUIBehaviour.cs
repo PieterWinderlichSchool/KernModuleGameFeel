@@ -12,6 +12,8 @@ public class DraggableUIBehaviour : MonoBehaviour
 
     private GameObject originButton;
     private GameObject socket = null;
+    public Collider triggerCollider;
+    public bool Isinteracting = false;
     void Start()
     {
         cam = Camera.main;
@@ -20,15 +22,16 @@ public class DraggableUIBehaviour : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (!Input.GetKey(KeyCode.H))
+            if (!Input.GetKey(KeyCode.W) && (Isinteracting == false))
             {
+                triggerCollider.isTrigger = true;
                 Vector3 mousePosition = Input.mousePosition;
                 mousePosition.z = DistanceToCamera;
                 transform.position = cam.ScreenToWorldPoint(mousePosition); 
             }
             else
             {
-                Debug.Log("hit");
+                triggerCollider.isTrigger = false;
             }
         }
         else
@@ -57,5 +60,20 @@ public class DraggableUIBehaviour : MonoBehaviour
             Destroy(originButton);
         }
         Destroy(this.gameObject);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        
+        if (other.gameObject.tag == "Player")
+        {
+            Isinteracting = true;
+            
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        Isinteracting = false;
     }
 }
