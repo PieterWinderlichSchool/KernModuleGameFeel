@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 99bdc7a19585da147b70299c423c87ca
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - CYBERHOUSE
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 589bf7e33354d7844a64752cc7ba4ca8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
