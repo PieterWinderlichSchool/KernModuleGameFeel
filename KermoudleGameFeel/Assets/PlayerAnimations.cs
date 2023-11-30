@@ -21,7 +21,6 @@ public class PlayerAnimations : MonoBehaviour
     public void ChangeAnimation(bool hasJumped, float velocity)
     {
         animations.SetBool("Grounded",hasJumped);
-        
     }
 
     public void ChangeAnimation(float speed)

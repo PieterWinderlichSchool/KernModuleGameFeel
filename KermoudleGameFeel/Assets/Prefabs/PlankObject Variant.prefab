@@ -122,6 +122,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6130730611456163032, guid: c3a16805001d6af4d9af5d6189f64d67,
+        type: 3}
+      propertyPath: draggableUIType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6688247500450008508, guid: c3a16805001d6af4d9af5d6189f64d67,
         type: 3}
       propertyPath: m_Sprite

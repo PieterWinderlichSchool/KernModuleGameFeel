@@ -15,6 +15,8 @@ public class DraggableUI : MonoBehaviour,IPointerDownHandler
     private GameObject activeUIElementInWorld;
     [SerializeField]
     private float draggableUIDistanceToCamera;
+
+    [SerializeField] private AudioSource ASource;
     void Start()
     {
         cam = Camera.main;
@@ -24,7 +26,7 @@ public class DraggableUI : MonoBehaviour,IPointerDownHandler
        
        Vector3 mousePosition = Input.mousePosition;
        mousePosition.z = draggableUIDistanceToCamera;
-
+       ASource.Play();
        GameObject draggedUI =  Instantiate(elementToSpawn,cam.ScreenToWorldPoint(mousePosition),transform.rotation) as GameObject;
        draggedUI.GetComponent<DraggableUIBehaviour>().SetOrigin(this.gameObject);
        activeUIElementInWorld = draggedUI;

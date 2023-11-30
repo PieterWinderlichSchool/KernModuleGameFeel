@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 490895346270075122}
   - component: {fileID: 490895346270075123}
-  - component: {fileID: 8630765990244115964}
+  - component: {fileID: 4028566040910621311}
+  - component: {fileID: -507588452961489209}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -47,7 +48,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8630765990244115964
+--- !u!114 &4028566040910621311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,10 +57,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 490895346270075120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16998dfd277a5144fb26e69e1872cfec, type: 3}
+  m_Script: {fileID: 11500000, guid: 346d4c5b1ba671a41a1e06f4aa8f622b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceToCamera: 2
+  HeartManager: {fileID: 0}
+--- !u!65 &-507588452961489209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490895346270075120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4058099209661208197
 GameObject:
   m_ObjectHideFlags: 0
