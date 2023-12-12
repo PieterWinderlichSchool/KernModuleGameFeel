@@ -86,7 +86,7 @@ namespace TarodevController
         {
             Physics2D.queriesStartInColliders = false;
             // Ground and Ceiling
-            bool ceilingHit = Physics.Raycast(transform.localPosition + Vector3.up *1.8f, Vector3.up,_stats.GrounderDistance);
+            bool ceilingHit = Physics.Raycast(transform.localPosition + Vector3.up *1f, Vector3.up,_stats.GrounderDistance);
             bool groundHit = Physics.Raycast(transform.localPosition + Vector3.down *-0.1f, Vector3.down,_stats.GrounderDistance);
             // Hit a Ceiling
             if (ceilingHit)
