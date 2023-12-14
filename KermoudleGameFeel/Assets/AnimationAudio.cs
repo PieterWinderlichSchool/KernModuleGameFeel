@@ -8,6 +8,8 @@ public class AnimationAudio : MonoBehaviour
     public PlayerController controller;
 
     public AudioSource source;
+
+    public ParticleSystem particles;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class AnimationAudio : MonoBehaviour
         if (hasJumped)
         {
             source.Play();
+            particles.Play();
         }
     }
 }
