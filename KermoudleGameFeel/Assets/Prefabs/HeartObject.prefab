@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8441902054988970132}
   - component: {fileID: 6130730611456163032}
-  - component: {fileID: 2083695264233041906}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,20 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggableUIType: 0
   SocketObject: {fileID: 0}
---- !u!136 &2083695264233041906
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 588993195003156133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 8
-  m_Height: 350
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 50.36}
 --- !u!1 &1791143861462059839
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +58,7 @@ GameObject:
   - component: {fileID: 6688247500450008508}
   - component: {fileID: 4698380717691202055}
   - component: {fileID: 5376614597704813751}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: HeartObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,5 +159,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 22, y: 12, z: 250}
-  m_Center: {x: 0, y: 0, z: 125}
+  m_Size: {x: 22, y: 12, z: 371}
+  m_Center: {x: 0, y: 0, z: 186.2}

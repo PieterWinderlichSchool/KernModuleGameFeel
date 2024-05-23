@@ -20,6 +20,7 @@ namespace TarodevController
         private Vector3 _frameVelocity;
         private bool _cachedQueryStartInColliders;
         public Action<float> movementChanged;
+        public checkisOnGround isOnground;
         #region Interface
 
         public Vector3 FrameInput => _frameInput.Move;
@@ -42,6 +43,7 @@ namespace TarodevController
         {
             _time += Time.deltaTime;
             GatherInput();
+            
         }
 
         private void GatherInput()
@@ -88,6 +90,7 @@ namespace TarodevController
             // Ground and Ceiling
             bool ceilingHit = Physics.Raycast(transform.localPosition + Vector3.up *1f, Vector3.up,_stats.GrounderDistance);
             bool groundHit = Physics.Raycast(transform.localPosition + Vector3.down *-0.1f, Vector3.down,_stats.GrounderDistance);
+           
             // Hit a Ceiling
             if (ceilingHit)
             {
@@ -95,8 +98,9 @@ namespace TarodevController
             }
 
             // Landed on the Ground
-            if (!_grounded && groundHit)
+            if (!_grounded && isOnground.isonGround)
             {
+                
                 _grounded = true;
                 _coyoteUsable = true;
                 _bufferedJumpUsable = true;
@@ -105,8 +109,9 @@ namespace TarodevController
                 
             }
             // Left the Ground
-            else if (_grounded && !groundHit)
+            else if (_grounded && !isOnground.isonGround)
             {
+               
                 _grounded = false;
                 _frameLeftGrounded = _time;
                 GroundedChanged?.Invoke(false, 0);

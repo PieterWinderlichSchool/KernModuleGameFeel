@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - UISocket
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UIInWorld
   - 2ndUiLayer
   - 2nUIInWorld
-  - 
+  - Detection
   - 
   - 
   - 
