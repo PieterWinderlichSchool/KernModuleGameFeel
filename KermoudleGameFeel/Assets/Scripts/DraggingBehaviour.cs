@@ -25,6 +25,7 @@ public class DraggingBehaviour : MonoBehaviour
         if (other.gameObject.tag == "UISocket")
         {
             CheckObjectType(other);
+            Debug.Log(other);
         }
         
         

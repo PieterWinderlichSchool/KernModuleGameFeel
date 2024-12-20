@@ -16,7 +16,6 @@ public class checkisOnGround : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(isonGround);
     }
    
 
@@ -24,7 +23,6 @@ public class checkisOnGround : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("hit");
         isonGround = false;
     }
 

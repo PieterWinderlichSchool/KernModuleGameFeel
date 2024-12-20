@@ -22,7 +22,7 @@ public class DraggableUIBehaviour : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (!Input.GetKey(KeyCode.W) && (Isinteracting == false))
+            if (!Input.GetKey(KeyCode.Mouse1) && (Isinteracting == false))
             {
                 triggerCollider.isTrigger = true;
                 Vector3 mousePosition = Input.mousePosition;
