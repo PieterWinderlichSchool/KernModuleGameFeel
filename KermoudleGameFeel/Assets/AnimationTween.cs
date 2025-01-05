@@ -14,7 +14,6 @@ public class AnimationTween : MonoBehaviour
     private void OnEnable()
     {
         Animate();
-        Debug.Log("hit" , this);
     }
 
     public void Animate()

@@ -33,11 +33,13 @@ public class checkisOnGround : MonoBehaviour
             if (other.gameObject.GetComponent<BoxCollider>().isTrigger != true)
             {
                 isonGround = true;
+                Debug.Log("hit");
             }
-            else
-            {
-                isonGround = false;
-            }
+            //else
+           // {
+             //   isonGround = false;
+            //    Debug.Log("hit2");
+           // }
         }
         else
         {

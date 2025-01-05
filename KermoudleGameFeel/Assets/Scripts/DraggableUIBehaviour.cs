@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DraggableUIBehaviour : MonoBehaviour
 {
@@ -14,9 +15,11 @@ public class DraggableUIBehaviour : MonoBehaviour
     private GameObject socket = null;
     public Collider triggerCollider;
     public bool Isinteracting = false;
+    public DraggableUI Button;
     void Start()
     {
         cam = Camera.main;
+
     }
     void Update()
     {
@@ -68,12 +71,21 @@ public class DraggableUIBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Isinteracting = true;
-            
         }
     }
 
     private void OnCollisionExit(Collision other)
     {
         Isinteracting = false;
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "AntiUI")
+        {
+            Button.ResetButton();
+            DragEnded();
+           
+        }
     }
 }
